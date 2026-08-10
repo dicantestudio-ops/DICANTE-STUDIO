@@ -1,0 +1,1142 @@
+/* ========================================
+   RESET
+======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #000;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* ========================================
+   HEADER
+======================================== */
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 90px;
+
+    padding: 0 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    gap: 35px;
+
+    z-index: 100;
+}
+
+
+/* NAVIGATION LINKS */
+
+header > a {
+    position: relative;
+
+    color: #fff;
+
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+
+    transition: 0.3s ease;
+}
+
+
+/* UNDERLINE EFFECT */
+
+header > a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -8px;
+
+    width: 0;
+    height: 2px;
+
+    background: #fff;
+
+    transition: 0.3s ease;
+}
+
+header > a:hover::after {
+    width: 100%;
+}
+
+header > a:hover {
+    opacity: 0.7;
+}
+
+
+/* ========================================
+   HEADER BUTTONS
+======================================== */
+
+.btn {
+    border: 1px solid rgba(255, 255, 255, 0.8);
+
+    background: transparent;
+
+    color: #fff;
+
+    padding: 11px 22px;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    letter-spacing: 0.8px;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+
+/* HOVER */
+
+.btn:hover {
+    background: #fff;
+    color: #000;
+}
+
+
+/* ========================================
+   HERO
+======================================== */
+
+.hero {
+    position: relative;
+
+    width: 100%;
+    height: 100vh;
+
+    min-height: 650px;
+
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+}
+
+
+/* ========================================
+   BACKGROUND SLIDER
+======================================== */
+
+.hero-background {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+
+    z-index: 0;
+}
+
+
+/* EACH SLIDE */
+
+.hero-slide {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    opacity: 0;
+
+    transform: scale(1.08);
+
+    animation: heroSlider 18s infinite;
+}
+
+
+/* ========================================
+   YOUR IMAGES
+======================================== */
+
+.slide-1 {
+    background-image: url("images/hero-1.jpg");
+
+    animation-delay: 0s;
+}
+
+.slide-2 {
+    background-image: url("images/hero-2.jpg");
+
+    animation-delay: 6s;
+}
+
+.slide-3 {
+    background-image: url("images/hero-3.jpg");
+
+    animation-delay: 12s;
+}
+
+
+/* ========================================
+   SLIDER ANIMATION
+======================================== */
+
+@keyframes heroSlider {
+
+    0% {
+        opacity: 0;
+        transform: scale(1.08);
+    }
+
+    5% {
+        opacity: 1;
+    }
+
+    28% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    33% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(1);
+    }
+}
+
+
+/* ========================================
+   DARK OVERLAY
+======================================== */
+
+.hero-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 1;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.78) 0%,
+            rgba(0, 0, 0, 0.52) 40%,
+            rgba(0, 0, 0, 0.18) 75%,
+            rgba(0, 0, 0, 0.35) 100%
+        );
+}
+
+
+/* ========================================
+   HERO CONTENT
+======================================== */
+
+.hero-content {
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+    max-width: 1400px;
+
+    margin: 0 auto;
+
+    padding: 120px 70px 60px;
+}
+
+
+/* ========================================
+   SMALL LABEL
+======================================== */
+
+.hero-label {
+    margin-bottom: 22px;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    letter-spacing: 4px;
+
+    color: rgba(255, 255, 255, 0.8);
+
+    text-transform: uppercase;
+}
+
+
+/* ========================================
+   MAIN HERO TITLE
+======================================== */
+
+.hero-content h2 {
+    max-width: 800px;
+
+    font-size: clamp(60px, 7vw, 110px);
+
+    line-height: 0.95;
+
+    font-weight: 800;
+
+    letter-spacing: -4px;
+
+    color: #fff;
+
+    margin-bottom: 30px;
+}
+
+
+/* ========================================
+   HERO DESCRIPTION
+======================================== */
+
+.hero-text {
+    max-width: 500px;
+
+    font-size: 18px;
+
+    line-height: 1.7;
+
+    font-weight: 400;
+
+    color: rgba(255, 255, 255, 0.82);
+
+    margin-bottom: 40px;
+}
+
+
+/* ========================================
+   HERO BUTTON
+======================================== */
+
+.hero-button {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 16px 30px;
+
+    background: #fff;
+
+    color: #000;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.5px;
+
+    transition: all 0.35s ease;
+}
+
+
+/* BUTTON HOVER */
+
+.hero-button:hover {
+    background: transparent;
+
+    color: #fff;
+
+    border: 1px solid #fff;
+
+    transform: translateY(-3px);
+}
+
+
+/* ========================================
+   SLIDER PROGRESS INDICATOR
+======================================== */
+
+.hero::after {
+    content: "";
+
+    position: absolute;
+
+    left: 70px;
+    bottom: 45px;
+
+    width: 80px;
+    height: 2px;
+
+    background: rgba(255, 255, 255, 0.35);
+
+    z-index: 5;
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 900px) {
+
+    header {
+        padding: 0 35px;
+
+        gap: 22px;
+    }
+
+    header > a {
+        font-size: 14px;
+    }
+
+    .btn {
+        padding: 10px 16px;
+
+        font-size: 12px;
+    }
+
+    .hero-content {
+        padding-left: 35px;
+        padding-right: 35px;
+    }
+
+    .hero-content h2 {
+        font-size: clamp(55px, 9vw, 85px);
+
+        letter-spacing: -3px;
+    }
+
+    .hero::after {
+        left: 35px;
+    }
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 650px) {
+
+    header {
+        height: 75px;
+
+        padding: 0 20px;
+
+        gap: 15px;
+
+        justify-content: flex-end;
+    }
+
+
+    /* HIDE NAV LINKS ON SMALL SCREENS */
+
+    header > a {
+        display: none;
+    }
+
+
+    .btn {
+        padding: 9px 14px;
+
+        font-size: 11px;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        min-height: 700px;
+    }
+
+
+    .hero-content {
+        padding: 110px 25px 70px;
+
+        align-self: center;
+    }
+
+
+    .hero-label {
+        font-size: 11px;
+
+        letter-spacing: 3px;
+
+        margin-bottom: 18px;
+    }
+
+
+    .hero-content h2 {
+        font-size: clamp(50px, 14vw, 72px);
+
+        line-height: 0.98;
+
+        letter-spacing: -3px;
+
+        margin-bottom: 25px;
+    }
+
+
+    .hero-text {
+        max-width: 360px;
+
+        font-size: 16px;
+
+        line-height: 1.6;
+
+        margin-bottom: 30px;
+    }
+
+
+    .hero-button {
+        padding: 14px 25px;
+
+        font-size: 13px;
+    }
+
+
+    .hero::after {
+        left: 25px;
+
+        bottom: 30px;
+
+        width: 60px;
+    }
+}
+
+
+/* ========================================
+   VERY SMALL PHONES
+======================================== */
+
+@media (max-width: 400px) {
+
+    header {
+        padding: 0 15px;
+    }
+
+    .btn {
+        padding: 8px 12px;
+
+        font-size: 10px;
+    }
+
+    .hero-content {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .hero-content h2 {
+        font-size: 48px;
+
+        letter-spacing: -2px;
+    }
+
+    .hero-text {
+        font-size: 15px;
+    }
+
+    .hero::after {
+        left: 20px;
+    }
+}
+
+
+/* ========================================
+   REDUCED MOTION
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .hero-slide {
+        animation: none;
+    }
+
+    * {
+        scroll-behavior: auto;
+    }
+}
+/* ========================================
+   RESET
+======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #000;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+
+/* ========================================
+   HEADER
+======================================== */
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 90px;
+
+    padding: 0 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    gap: 30px;
+
+    z-index: 1000;
+}
+
+
+/* ========================================
+   HEADER LINKS
+======================================== */
+
+header a {
+    position: relative;
+
+    color: #fff;
+    text-decoration: none;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    transition: opacity 0.3s ease;
+}
+
+header a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -8px;
+
+    width: 0;
+    height: 2px;
+
+    background: #fff;
+
+    transition: width 0.3s ease;
+}
+
+header a:hover {
+    opacity: 0.7;
+}
+
+header a:hover::after {
+    width: 100%;
+}
+
+
+/* ========================================
+   SIGN UP / LOGIN BUTTONS
+======================================== */
+
+.btn {
+    padding: 11px 22px;
+
+    border: 1px solid rgba(255, 255, 255, 0.85);
+
+    background: transparent;
+    color: #fff;
+
+    font-family: inherit;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    letter-spacing: 0.5px;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background: #fff;
+    color: #000;
+}
+
+
+/* ========================================
+   HERO
+======================================== */
+
+.hero {
+    position: relative;
+
+    width: 100%;
+    height: 100vh;
+
+    min-height: 650px;
+
+    overflow: hidden;
+}
+
+
+/* ========================================
+   BACKGROUND SLIDER
+======================================== */
+
+.hero-background {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    z-index: 1;
+}
+
+
+/* ========================================
+   SLIDES
+======================================== */
+
+.hero-slide {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    opacity: 0;
+
+    animation: heroSlider 15s infinite;
+}
+
+
+/* ========================================
+   BACKGROUND IMAGES
+======================================== */
+
+.slide-1 {
+    background-image: url("images/img1.png");
+    animation-delay: 0s;
+}
+
+.slide-2 {
+    background-image: url("images/img2.png  ");
+    animation-delay: 5s;
+}
+
+.slide-3 {
+    background-image: url("images/Dream\ house.png");
+    animation-delay: 10s;
+}
+
+
+/* ========================================
+   SLIDER ANIMATION
+======================================== */
+
+@keyframes heroSlider {
+
+    0% {
+        opacity: 0;
+        transform: scale(1.04);
+    }
+
+    8% {
+        opacity: 1;
+    }
+
+    30% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    38% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(1.04);
+    }
+}
+
+
+/* ========================================
+   DARK OVERLAY
+======================================== */
+
+.hero-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.72),
+            rgba(0, 0, 0, 0.32),
+            rgba(0, 0, 0, 0.38)
+        );
+
+    z-index: 2;
+}
+
+
+/* ========================================
+   HERO CONTENT
+======================================== */
+
+.hero-content {
+    position: absolute;
+
+    left: 70px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    max-width: 1000px;
+
+    z-index: 3;
+}
+
+
+/* ========================================
+   HERO LABEL
+======================================== */
+
+.hero-label {
+    margin-bottom: 30px;
+
+    font-size: 16px;
+    font-weight: 700;
+
+    letter-spacing: 6px;
+
+    text-transform: uppercase;
+}
+
+
+/* ========================================
+   HERO MAIN HEADING
+======================================== */
+
+.hero-content h1 {
+    margin-bottom: 35px;
+
+    font-size: clamp(70px, 10vw, 145px);
+
+    font-weight: 700;
+
+    line-height: 0.9;
+
+    letter-spacing: -6px;
+}
+
+
+/* ========================================
+   HERO DESCRIPTION
+======================================== */
+
+.hero-text {
+    max-width: 650px;
+
+    margin-bottom: 40px;
+
+    font-size: 20px;
+
+    font-weight: 400;
+
+    line-height: 1.6;
+
+    color: rgba(255, 255, 255, 0.9);
+}
+
+
+/* ========================================
+   DISCOVER MORE BUTTON
+======================================== */
+
+.hero-button {
+    display: inline-block;
+
+    padding: 16px 32px;
+
+    border: 1px solid rgba(255, 255, 255, 0.9);
+
+    color: #fff;
+
+    text-decoration: none;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    transition: all 0.3s ease;
+}
+
+.hero-button:hover {
+    background: #fff;
+
+    color: #000;
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 1000px) {
+
+    header {
+        padding: 0 40px;
+
+        gap: 20px;
+    }
+
+    header a {
+        font-size: 14px;
+    }
+
+    .btn {
+        padding: 10px 17px;
+
+        font-size: 12px;
+    }
+
+    .hero-content {
+        left: 40px;
+
+        max-width: 850px;
+    }
+
+    .hero-label {
+        font-size: 14px;
+
+        letter-spacing: 5px;
+    }
+
+    .hero-content h1 {
+        font-size: clamp(65px, 10vw, 110px);
+    }
+
+    .hero-text {
+        font-size: 18px;
+
+        max-width: 560px;
+    }
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 650px) {
+
+    /* HEADER */
+
+    header {
+        height: auto;
+
+        padding: 22px 20px;
+
+        justify-content: flex-start;
+
+        flex-wrap: wrap;
+
+        gap: 14px;
+    }
+
+
+    /* NAVIGATION */
+
+    header a {
+        font-size: 12px;
+    }
+
+
+    /* BUTTONS */
+
+    .btn {
+        padding: 8px 13px;
+
+        font-size: 10px;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        min-height: 700px;
+    }
+
+
+    /* HERO CONTENT */
+
+    .hero-content {
+        left: 20px;
+        right: 20px;
+
+        top: auto;
+        bottom: 55px;
+
+        transform: none;
+
+        max-width: none;
+    }
+
+
+    /* LABEL */
+
+    .hero-label {
+        margin-bottom: 20px;
+
+        font-size: 11px;
+
+        font-weight: 700;
+
+        letter-spacing: 4px;
+    }
+
+
+    /* HEADING */
+
+    .hero-content h1 {
+        margin-bottom: 28px;
+
+        font-size: clamp(55px, 16vw, 85px);
+
+        font-weight: 700;
+
+        line-height: 0.92;
+
+        letter-spacing: -4px;
+    }
+
+
+    /* DESCRIPTION */
+
+    .hero-text {
+        max-width: 360px;
+
+        margin-bottom: 28px;
+
+        font-size: 16px;
+
+        line-height: 1.6;
+    }
+
+
+    /* DISCOVER BUTTON */
+
+    .hero-button {
+        padding: 14px 26px;
+
+        font-size: 13px;
+
+        font-weight: 600;
+    }
+
+
+    /* MOBILE IMAGE */
+
+    .hero-slide {
+        background-position: center center;
+    }
+}
+
+
+/* ========================================
+   SMALL PHONES
+======================================== */
+
+@media (max-width: 400px) {
+
+    header {
+        padding: 18px 15px;
+
+        gap: 10px;
+    }
+
+    header a {
+        font-size: 11px;
+    }
+
+    .btn {
+        padding: 7px 10px;
+
+        font-size: 10px;
+    }
+
+    .hero-content {
+        left: 15px;
+        right: 15px;
+
+        bottom: 40px;
+    }
+
+    .hero-label {
+        font-size: 10px;
+
+        letter-spacing: 3px;
+    }
+
+    .hero-content h1 {
+        font-size: clamp(48px, 15vw, 70px);
+
+        letter-spacing: -3px;
+    }
+
+    .hero-text {
+        font-size: 14px;
+
+        max-width: 320px;
+    }
+
+    .hero-button {
+        padding: 12px 22px;
+
+        font-size: 12px;
+    }
+}
