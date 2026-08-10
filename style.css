@@ -754,7 +754,7 @@ header a:hover::after {
 ======================================== */
 
 .slide-1 {
-    background-image: url("images/img1.png");
+    background-image: url("images/img3.png");
     animation-delay: 0s;
 }
 
@@ -1139,4 +1139,1717 @@ header a:hover::after {
 
         font-size: 12px;
     }
+}
+
+
+/* ========================================
+   ABOUT PAGE
+======================================== */
+
+.about {
+    min-height: 100vh;
+
+    padding: 170px 70px 100px;
+
+    background: #f5f5f3;
+
+    color: #111;
+
+    display: flex;
+    align-items: center;
+}
+
+.about-content {
+    max-width: 950px;
+}
+
+
+/* LABEL */
+
+.about-label {
+    margin-bottom: 30px;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 5px;
+
+    text-transform: uppercase;
+}
+
+
+/* HEADING */
+
+.about-content h1 {
+    margin-bottom: 55px;
+
+    font-size: clamp(65px, 9vw, 130px);
+
+    font-weight: 600;
+
+    line-height: 0.9;
+
+    letter-spacing: -6px;
+}
+
+
+/* TEXT */
+
+.about-text {
+    max-width: 700px;
+}
+
+.about-text p {
+    margin-bottom: 25px;
+
+    font-size: 19px;
+
+    line-height: 1.7;
+
+    color: #333;
+}
+
+
+/* ========================================
+   ABOUT MOBILE
+======================================== */
+
+@media (max-width: 650px) {
+
+    .about {
+        padding: 150px 20px 70px;
+
+        min-height: 100vh;
+    }
+
+    .about-label {
+        font-size: 10px;
+
+        letter-spacing: 3px;
+
+        margin-bottom: 22px;
+    }
+
+    .about-content h1 {
+        font-size: clamp(52px, 15vw, 80px);
+
+        letter-spacing: -4px;
+
+        margin-bottom: 40px;
+    }
+
+    .about-text p {
+        font-size: 15px;
+
+        line-height: 1.7;
+    }
+
+   
+}
+
+
+/* ========================================
+   ABOUT PAGE — RESET
+======================================== */
+
+.about-page {
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+
+    min-height: 100vh;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: #E8DDD0;
+    color: #211C18;
+
+    overflow-x: hidden;
+}
+
+.about-page *,
+.about-page *::before,
+.about-page *::after {
+    box-sizing: border-box;
+}
+
+
+/* ========================================
+   ABOUT HEADER
+======================================== */
+
+.about-page header {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 90px;
+
+    padding: 0 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    gap: 30px;
+
+    z-index: 1000;
+}
+
+
+/* ========================================
+   HEADER LINKS
+======================================== */
+
+.about-page header a {
+    position: relative;
+
+    color: #211C18;
+
+    text-decoration: none;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    transition: opacity 0.3s ease;
+}
+
+
+/* UNDERLINE */
+
+.about-page header a:not(.btn)::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -8px;
+
+    width: 0;
+    height: 1px;
+
+    background: #211C18;
+
+    transition: width 0.3s ease;
+}
+
+.about-page header a:not(.btn):hover::after {
+    width: 100%;
+}
+
+.about-page header a:hover {
+    opacity: 0.65;
+}
+
+
+/* ========================================
+   SIGN UP / LOGIN
+======================================== */
+
+.about-page .btn {
+    padding: 10px 20px;
+
+    border: 1px solid #211C18;
+
+    background: transparent;
+
+    color: #211C18;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    letter-spacing: 0.5px;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+.about-page .btn:hover {
+    background: #211C18;
+
+    color: #E8DDD0;
+
+    opacity: 1;
+}
+
+
+/* ========================================
+   ABOUT SECTION
+======================================== */
+
+.about-page .about {
+    width: 100%;
+
+    min-height: 100vh;
+
+    padding: 170px 70px 100px;
+
+    background: #E8DDD0;
+
+    color: #211C18;
+
+    display: flex;
+    align-items: center;
+}
+
+
+/* ========================================
+   ABOUT CONTENT
+======================================== */
+
+.about-page .about-content {
+    width: 100%;
+
+    max-width: 1050px;
+}
+
+
+/* ========================================
+   ABOUT LABEL
+======================================== */
+
+.about-page .about-label {
+    margin-bottom: 30px;
+
+    color: #765F4C;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    letter-spacing: 5px;
+
+    text-transform: uppercase;
+}
+
+
+/* ========================================
+   MAIN HEADING
+======================================== */
+
+.about-page .about-content h1 {
+    margin: 0 0 55px;
+
+    color: #211C18;
+
+    font-size: clamp(70px, 9vw, 135px);
+
+    font-weight: 700;
+
+    line-height: 0.88;
+
+    letter-spacing: -6px;
+}
+
+
+/* ========================================
+   ABOUT TEXT
+======================================== */
+
+.about-page .about-text {
+    max-width: 720px;
+}
+
+.about-page .about-text p {
+    margin: 0 0 25px;
+
+    color: #51463D;
+
+    font-size: 19px;
+
+    font-weight: 400;
+
+    line-height: 1.75;
+}
+
+
+/* ========================================
+   DECORATIVE LINE
+======================================== */
+
+.about-page .about-content::after {
+    content: "";
+
+    display: block;
+
+    width: 85px;
+    height: 2px;
+
+    margin-top: 45px;
+
+    background:#8B6B4A;
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 1000px) {
+
+    .about-page header {
+        padding: 0 40px;
+
+        gap: 20px;
+    }
+
+    .about-page header a {
+        font-size: 14px;
+    }
+
+    .about-page .about {
+        padding: 150px 40px 80px;
+    }
+
+    .about-page .about-content h1 {
+        font-size: clamp(65px, 10vw, 110px);
+    }
+
+    .about-page .about-text p {
+        font-size: 17px;
+    }
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 650px) {
+
+    .about-page header {
+        position: absolute;
+
+        height: auto;
+
+        padding: 22px 20px;
+
+        justify-content: flex-start;
+
+        flex-wrap: wrap;
+
+        gap: 14px;
+    }
+
+    .about-page header a {
+        font-size: 12px;
+    }
+
+    .about-page .btn {
+        padding: 8px 13px;
+
+        font-size: 10px;
+    }
+
+
+    /* ABOUT */
+
+    .about-page .about {
+        min-height: 100vh;
+
+        padding: 150px 20px 70px;
+
+        align-items: flex-start;
+    }
+
+
+    /* LABEL */
+
+    .about-page .about-label {
+        margin-bottom: 22px;
+
+        font-size: 10px;
+
+        letter-spacing: 3px;
+    }
+
+
+    /* HEADING */
+
+    .about-page .about-content h1 {
+        margin-bottom: 40px;
+
+        font-size: clamp(55px, 15vw, 82px);
+
+        line-height: 0.9;
+
+        letter-spacing: -4px;
+    }
+
+
+    /* TEXT */
+
+    .about-page .about-text {
+        max-width: 100%;
+    }
+
+    .about-page .about-text p {
+        margin-bottom: 22px;
+
+        font-size: 15px;
+
+        line-height: 1.7;
+    }
+
+
+    /* LINE */
+
+    .about-page .about-content::after {
+        width: 60px;
+
+        margin-top: 35px;
+    }
+}
+
+
+/* ========================================
+   SMALL PHONES
+======================================== */
+
+@media (max-width: 400px) {
+
+    .about-page header {
+        padding: 18px 15px;
+
+        gap: 10px;
+    }
+
+    .about-page header a {
+        font-size: 11px;
+    }
+
+    .about-page .btn {
+        padding: 7px 10px;
+
+        font-size: 10px;
+    }
+
+    .about-page .about {
+        padding: 135px 15px 60px;
+    }
+
+    .about-page .about-label {
+        font-size: 9px;
+
+        letter-spacing: 2.5px;
+    }
+
+    .about-page .about-content h1 {
+        font-size: clamp(48px, 15vw, 70px);
+
+        letter-spacing: -3px;
+    }
+
+    .about-page .about-text p {
+        font-size: 14px;
+    }
+}
+
+/* ========================================
+   SERVICES PAGE
+======================================== */
+
+.services-page {
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+
+    background: #F1E8DE;
+
+    color: #211C18;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    overflow-x: hidden;
+}
+
+.services-page *,
+.services-page *::before,
+.services-page *::after {
+    box-sizing: border-box;
+}
+
+
+/* ========================================
+   HEADER
+======================================== */
+
+.services-page header {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 90px;
+
+    padding: 0 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    z-index: 1000;
+}
+
+
+/* LOGO */
+
+.services-page header h1 {
+    margin: 0;
+
+    color: #211C18;
+
+    font-size: 21px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    white-space: nowrap;
+}
+
+
+/* NAV */
+
+.services-page header nav {
+    display: flex;
+
+    align-items: center;
+
+    gap: 30px;
+}
+
+.services-page header nav a {
+    position: relative;
+
+    color: #211C18;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition: opacity 0.3s ease;
+}
+
+.services-page header nav a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -7px;
+
+    width: 0;
+    height: 1px;
+
+    background: #211C18;
+
+    transition: width 0.3s ease;
+}
+
+.services-page header nav a:hover {
+    opacity: 0.6;
+}
+
+.services-page header nav a:hover::after {
+    width: 100%;
+}
+
+
+/* ========================================
+   SERVICES SECTION
+======================================== */
+
+.services {
+    min-height: 100vh;
+
+    padding: 170px 70px 100px;
+
+    display: grid;
+
+    grid-template-columns: 0.8fr 1.2fr;
+
+    gap: 100px;
+
+    align-items: start;
+}
+
+
+/* ========================================
+   INTRO
+======================================== */
+
+.services-intro {
+    position: sticky;
+
+    top: 150px;
+}
+
+
+/* LABEL */
+
+.services-label {
+    margin-bottom: 30px;
+
+    color: #765F4C;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 5px;
+
+    text-transform: uppercase;
+}
+
+
+/* HEADING */
+
+.services-intro h2 {
+    margin: 0 0 35px;
+
+    color: #211C18;
+
+    font-size: clamp(65px, 8vw, 120px);
+
+    font-weight: 700;
+
+    line-height: 0.87;
+
+    letter-spacing: -6px;
+}
+
+
+/* DESCRIPTION */
+
+.services-description {
+    max-width: 390px;
+
+    color: #51463D;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+}
+
+
+/* ========================================
+   SERVICES LIST
+======================================== */
+
+.services-list {
+    width: 100%;
+}
+
+
+/* ========================================
+   SERVICE
+======================================== */
+
+.service {
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns: 60px 1fr 40px;
+
+    gap: 30px;
+
+    align-items: start;
+
+    padding: 35px 0;
+
+    border-top: 1px solid rgba(33, 28, 24, 0.25);
+
+    transition: padding 0.3s ease;
+}
+
+
+/* LAST BORDER */
+
+.service:last-child {
+    border-bottom: 1px solid rgba(33, 28, 24, 0.25);
+}
+
+
+/* NUMBER */
+
+.service-number {
+    padding-top: 5px;
+
+    color: #8B6B4A;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+
+/* SERVICE TITLE */
+
+.service-info h3 {
+    margin: 0 0 14px;
+
+    color: #211C18;
+
+    font-size: 32px;
+
+    font-weight: 600;
+
+    letter-spacing: -1px;
+
+    transition: transform 0.3s ease;
+}
+
+
+/* SERVICE DESCRIPTION */
+
+.service-info p {
+    max-width: 500px;
+
+    margin: 0;
+
+    color: #51463D;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+}
+
+
+/* ARROW */
+
+.service-arrow {
+    font-size: 25px;
+
+    color: #211C18;
+
+    transition: transform 0.3s ease;
+}
+
+
+/* ========================================
+   SERVICE HOVER
+======================================== */
+
+.service:hover {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.service:hover .service-info h3 {
+    transform: translateX(5px);
+}
+
+.service:hover .service-arrow {
+    transform: translate(5px, -5px);
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 1000px) {
+
+    .services-page header {
+        padding: 0 40px;
+    }
+
+    .services {
+        padding: 150px 40px 80px;
+
+        grid-template-columns: 1fr;
+
+        gap: 70px;
+    }
+
+    .services-intro {
+        position: relative;
+
+        top: auto;
+    }
+
+    .services-description {
+        max-width: 550px;
+    }
+
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 650px) {
+
+    .services-page header {
+        height: auto;
+
+        padding: 22px 20px;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 18px;
+    }
+
+
+    .services-page header h1 {
+        font-size: 18px;
+    }
+
+
+    .services-page header nav {
+        flex-wrap: wrap;
+
+        gap: 15px;
+    }
+
+
+    .services-page header nav a {
+        font-size: 12px;
+    }
+
+
+    .services {
+        padding: 175px 20px 70px;
+
+        display: block;
+    }
+
+
+    .services-intro {
+        margin-bottom: 65px;
+    }
+
+
+    .services-label {
+        margin-bottom: 22px;
+
+        font-size: 10px;
+
+        letter-spacing: 3px;
+    }
+
+
+    .services-intro h2 {
+        margin-bottom: 30px;
+
+        font-size: clamp(55px, 16vw, 85px);
+
+        letter-spacing: -4px;
+    }
+
+
+    .services-description {
+        max-width: 340px;
+
+        font-size: 15px;
+    }
+
+
+    /* SERVICE */
+
+    .service {
+        grid-template-columns: 35px 1fr 25px;
+
+        gap: 15px;
+
+        padding: 28px 0;
+    }
+
+
+    .service-number {
+        font-size: 11px;
+    }
+
+
+    .service-info h3 {
+        margin-bottom: 10px;
+
+        font-size: 23px;
+
+        letter-spacing: -0.5px;
+    }
+
+
+    .service-info p {
+        font-size: 14px;
+
+        line-height: 1.65;
+    }
+
+
+    .service-arrow {
+        font-size: 20px;
+    }
+
+
+    .service:hover {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+}
+
+
+/* ========================================
+   SMALL PHONES
+======================================== */
+
+@media (max-width: 400px) {
+
+    .services-page header {
+        padding: 18px 15px;
+    }
+
+
+    .services {
+        padding: 160px 15px 60px;
+    }
+
+
+    .services-intro h2 {
+        font-size: clamp(48px, 15vw, 70px);
+    }
+
+
+    .service {
+        grid-template-columns: 28px 1fr 20px;
+
+        gap: 10px;
+    }
+
+
+    .service-info h3 {
+        font-size: 21px;
+    }
+
+
+    .service-info p {
+        font-size: 13px;
+    }
+
+}
+
+/* ========================================
+   CONTACT PAGE — RESET
+======================================== */
+
+.contact-page {
+    margin: 0;
+    padding: 0;
+
+    min-height: 100vh;
+
+    box-sizing: border-box;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: #8B6B4A;
+
+    color: #fff;
+
+    overflow-x: hidden;
+}
+
+.contact-page *,
+.contact-page *::before,
+.contact-page *::after {
+    box-sizing: border-box;
+}
+
+
+/* ========================================
+   HEADER
+======================================== */
+
+.contact-page header {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 90px;
+
+    padding: 0 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    z-index: 1000;
+}
+
+
+/* LOGO */
+
+.contact-page header h1 {
+    margin: 0;
+
+    color: #fff;
+
+    font-size: 21px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    white-space: nowrap;
+}
+
+
+/* NAVIGATION */
+
+.contact-page header nav {
+    display: flex;
+
+    align-items: center;
+
+    gap: 30px;
+}
+
+.contact-page header nav a {
+    position: relative;
+
+    color: #fff;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition: opacity 0.3s ease;
+}
+
+
+/* NAV UNDERLINE */
+
+.contact-page header nav a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -8px;
+
+    width: 0;
+    height: 1px;
+
+    background: #fff;
+
+    transition: width 0.3s ease;
+}
+
+.contact-page header nav a:hover {
+    opacity: 0.65;
+}
+
+.contact-page header nav a:hover::after {
+    width: 100%;
+}
+
+
+/* ========================================
+   CONTACT SECTION
+======================================== */
+
+.contact-page .contact {
+    width: 100%;
+
+    min-height: 100vh;
+
+    padding: 165px 70px 100px;
+}
+
+
+/* ========================================
+   CONTACT INTRO
+======================================== */
+
+.contact-page .contact-intro {
+    max-width: 900px;
+
+    margin-bottom: 90px;
+}
+
+
+/* LABEL */
+
+.contact-page .contact-label {
+    margin: 0 0 30px;
+
+    color: rgba(255, 255, 255, 0.75);
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 5px;
+
+    text-transform: uppercase;
+}
+
+
+/* MAIN HEADING */
+
+.contact-page .contact-intro h2 {
+    margin: 0 0 35px;
+
+    color: #fff;
+
+    font-size: clamp(65px, 9vw, 130px);
+
+    font-weight: 700;
+
+    line-height: 0.88;
+
+    letter-spacing: -6px;
+}
+
+
+/* DESCRIPTION */
+
+.contact-page .contact-description {
+    max-width: 570px;
+
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.82);
+
+    font-size: 17px;
+
+    line-height: 1.7;
+}
+
+
+/* ========================================
+   CONTACT INFORMATION
+======================================== */
+
+.contact-page .contact-grid {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr 1.2fr;
+
+    gap: 50px;
+
+    padding: 35px 0;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.35);
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+
+/* ========================================
+   CONTACT ITEM
+======================================== */
+
+.contact-page .contact-item-label {
+    margin: 0 0 18px;
+
+    color: rgba(255, 255, 255, 0.65);
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+}
+
+
+/* CONTACT LINKS */
+
+.contact-page .contact-link {
+    color: #fff;
+
+    text-decoration: none;
+
+    font-size: 17px;
+
+    font-weight: 500;
+
+    word-break: break-word;
+
+    transition: opacity 0.3s ease;
+}
+
+.contact-page .contact-link:hover {
+    opacity: 0.65;
+}
+
+
+/* ========================================
+   AVAILABILITY
+======================================== */
+
+.contact-page .hours {
+    max-width: 400px;
+}
+
+
+.contact-page .hours-row {
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+    padding: 7px 0;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+
+    color: rgba(255, 255, 255, 0.9);
+
+    font-size: 13px;
+
+    line-height: 1.5;
+}
+
+.contact-page .hours-row:last-child {
+    border-bottom: none;
+}
+
+
+/* ========================================
+   PROJECT FORM SECTION
+======================================== */
+
+.contact-page .contact-form-section {
+    margin-top: 110px;
+
+    display: grid;
+
+    grid-template-columns: 0.8fr 1.2fr;
+
+    gap: 100px;
+}
+
+
+/* FORM HEADING */
+
+.contact-page .form-heading h3 {
+    margin: 0;
+
+    color: #fff;
+
+    font-size: clamp(45px, 5vw, 75px);
+
+    font-weight: 700;
+
+    line-height: 0.92;
+
+    letter-spacing: -4px;
+}
+
+
+/* ========================================
+   FORM
+======================================== */
+
+.contact-page .contact-form {
+    width: 100%;
+
+    max-width: 650px;
+}
+
+
+/* FORM GROUP */
+
+.contact-page .form-group {
+    margin-bottom: 28px;
+}
+
+
+/* LABEL */
+
+.contact-page .form-group label {
+    display: block;
+
+    margin-bottom: 10px;
+
+    color: rgba(255, 255, 255, 0.85);
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.5px;
+}
+
+
+/* INPUT / SELECT / TEXTAREA */
+
+.contact-page .form-group input,
+.contact-page .form-group select,
+.contact-page .form-group textarea {
+    width: 100%;
+
+    padding: 15px 16px;
+
+    border: 1px solid rgba(255, 255, 255, 0.45);
+
+    outline: none;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    color: #fff;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 14px;
+
+    border-radius: 0;
+
+    transition:
+        border-color 0.3s ease,
+        background 0.3s ease;
+}
+
+
+/* PLACEHOLDER */
+
+.contact-page .form-group input::placeholder,
+.contact-page .form-group textarea::placeholder {
+    color: rgba(255, 255, 255, 0.55);
+}
+
+
+/* SELECT */
+
+.contact-page .form-group select {
+    cursor: pointer;
+}
+
+
+/* SELECT OPTIONS */
+
+.contact-page .form-group select option {
+    background: #8B6B4A;
+
+    color: #fff;
+}
+
+
+/* TEXTAREA */
+
+.contact-page .form-group textarea {
+    min-height: 150px;
+
+    resize: vertical;
+}
+
+
+/* FOCUS */
+
+.contact-page .form-group input:focus,
+.contact-page .form-group select:focus,
+.contact-page .form-group textarea:focus {
+    border-color: #fff;
+
+    background: rgba(255, 255, 255, 0.12);
+}
+
+
+/* ========================================
+   SEND BUTTON
+======================================== */
+
+.contact-page .contact-button {
+    padding: 15px 30px;
+
+    border: 1px solid #fff;
+
+    background: #fff;
+
+    color: #8B6B4A;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+.contact-page .contact-button:hover {
+    background: transparent;
+
+    color: #fff;
+}
+
+
+/* ========================================
+   FOOTER
+======================================== */
+
+.contact-page .contact-footer {
+    padding: 30px 70px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+
+    color: rgba(255, 255, 255, 0.6);
+
+    font-size: 12px;
+
+    text-align: center;
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 1000px) {
+
+    .contact-page header {
+        padding: 0 40px;
+    }
+
+
+    .contact-page .contact {
+        padding: 150px 40px 80px;
+    }
+
+
+    .contact-page .contact-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+
+    .contact-page .availability {
+        grid-column: 1 / -1;
+    }
+
+
+    .contact-page .contact-form-section {
+        grid-template-columns: 1fr;
+
+        gap: 60px;
+    }
+
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 650px) {
+
+    /* HEADER */
+
+    .contact-page header {
+        position: absolute;
+
+        height: auto;
+
+        padding: 22px 20px;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 18px;
+    }
+
+
+    .contact-page header h1 {
+        font-size: 18px;
+    }
+
+
+    .contact-page header nav {
+        flex-wrap: wrap;
+
+        gap: 15px;
+    }
+
+
+    .contact-page header nav a {
+        font-size: 12px;
+    }
+
+
+    /* CONTACT */
+
+    .contact-page .contact {
+        padding: 175px 20px 70px;
+    }
+
+
+    /* INTRO */
+
+    .contact-page .contact-intro {
+        margin-bottom: 65px;
+    }
+
+
+    .contact-page .contact-label {
+        margin-bottom: 22px;
+
+        font-size: 10px;
+
+        letter-spacing: 3px;
+    }
+
+
+    .contact-page .contact-intro h2 {
+        margin-bottom: 30px;
+
+        font-size: clamp(55px, 16vw, 85px);
+
+        letter-spacing: -4px;
+    }
+
+
+    .contact-page .contact-description {
+        font-size: 15px;
+
+        line-height: 1.7;
+    }
+
+
+    /* CONTACT INFO */
+
+    .contact-page .contact-grid {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+
+        padding: 30px 0;
+    }
+
+
+    .contact-page .availability {
+        grid-column: auto;
+    }
+
+
+    .contact-page .contact-link {
+        font-size: 15px;
+    }
+
+
+    /* HOURS */
+
+    .contact-page .hours-row {
+        font-size: 12px;
+
+        padding: 8px 0;
+    }
+
+
+    /* FORM */
+
+    .contact-page .contact-form-section {
+        margin-top: 75px;
+
+        display: block;
+    }
+
+
+    .contact-page .form-heading {
+        margin-bottom: 50px;
+    }
+
+
+    .contact-page .form-heading h3 {
+        font-size: clamp(42px, 12vw, 65px);
+
+        letter-spacing: -3px;
+    }
+
+
+    /* INPUTS */
+
+    .contact-page .form-group input,
+    .contact-page .form-group select,
+    .contact-page .form-group textarea {
+        padding: 14px;
+
+        font-size: 13px;
+    }
+
+
+    /* BUTTON */
+
+    .contact-page .contact-button {
+        width: 100%;
+
+        padding: 15px;
+    }
+
+
+    /* FOOTER */
+
+    .contact-page .contact-footer {
+        padding: 25px 20px;
+
+        font-size: 11px;
+    }
+
+}
+
+
+/* ========================================
+   SMALL PHONES
+======================================== */
+
+@media (max-width: 400px) {
+
+    .contact-page header {
+        padding: 18px 15px;
+    }
+
+
+    .contact-page header h1 {
+        font-size: 16px;
+    }
+
+
+    .contact-page .contact {
+        padding: 160px 15px 60px;
+    }
+
+
+    .contact-page .contact-intro h2 {
+        font-size: clamp(48px, 15vw, 70px);
+    }
+
+
+    .contact-page .contact-description {
+        font-size: 14px;
+    }
+
+
+    .contact-page .form-heading h3 {
+        font-size: 42px;
+    }
+
 }
