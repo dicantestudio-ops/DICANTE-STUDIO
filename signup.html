@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sign Up | DICANTE STUDIO</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body class="signup-page">
+
+
+    <!-- HEADER -->
+
+    <header>
+
+        <a href="index.html" class="site-logo">
+            DICANTE STUDIO
+        </a>
+
+        <nav class="nav-menu" id="nav-menu">
+
+            <a href="index.html">Home</a>
+
+            <a href="about.html">About</a>
+
+            <a href="services.html">Services</a>
+
+            <a href="contact.html">Contact</a>
+
+            <a href="signup.html" class="btn active">
+                SIGN UP
+            </a>
+
+            <a href="login.html" class="btn">
+                LOGIN
+            </a>
+
+        </nav>
+
+
+        <!-- MOBILE HAMBURGER -->
+
+        <button
+            class="menu-toggle"
+            id="menu-toggle"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+        >
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+    </header>
+
+
+    <!-- SIGN UP -->
+
+    <main class="auth-page">
+
+        <section class="auth-section">
+
+            <div class="auth-container">
+
+
+                <!-- INTRO -->
+
+                <div class="auth-intro">
+
+                    <p class="auth-label">
+                        DICANTE STUDIO
+                    </p>
+
+                    <h1>
+                        Create your
+                        <br>
+                        account.
+                    </h1>
+
+                    <p class="auth-description">
+                        Join Dicante Studio and stay connected
+                        with our creative work and digital
+                        experiences.
+                    </p>
+
+                </div>
+
+
+                <!-- FORM -->
+
+                <div class="auth-card">
+
+                    <form class="auth-form">
+
+
+                        <div class="auth-group">
+
+                            <label for="name">
+                                Full Name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="name"
+                                name="name"
+                                placeholder="Your name"
+                                autocomplete="name"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="auth-group">
+
+                            <label for="email">
+                                Email Address
+                            </label>
+
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="Your email"
+                                autocomplete="email"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="auth-group">
+
+                            <label for="password">
+                                Password
+                            </label>
+
+                            <input
+                                type="password"
+                                id="password"
+                                name="password"
+                                placeholder="Create a password"
+                                autocomplete="new-password"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="auth-group">
+
+                            <label for="confirm-password">
+                                Confirm Password
+                            </label>
+
+                            <input
+                                type="password"
+                                id="confirm-password"
+                                name="confirm-password"
+                                placeholder="Confirm your password"
+                                autocomplete="new-password"
+                                required
+                            >
+
+                        </div>
+
+
+                        <button
+                            type="submit"
+                            class="auth-button"
+                        >
+                            CREATE ACCOUNT
+                        </button>
+
+                    </form>
+
+
+                    <p class="auth-switch">
+
+                        Already have an account?
+
+                        <a href="login.html">
+                            Login
+                        </a>
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- MOBILE MENU JAVASCRIPT -->
+
+    <script>
+
+        const menuToggle =
+            document.getElementById("menu-toggle");
+
+        const navMenu =
+            document.getElementById("nav-menu");
+
+
+        menuToggle.addEventListener("click", function () {
+
+            navMenu.classList.toggle("active");
+
+            menuToggle.classList.toggle("active");
+
+            const isOpen =
+                navMenu.classList.contains("active");
+
+            menuToggle.setAttribute(
+                "aria-expanded",
+                isOpen
+            );
+
+            document.body.classList.toggle(
+                "menu-open",
+                isOpen
+            );
+
+        });
+
+
+        document
+            .querySelectorAll(".nav-menu a")
+            .forEach(function (link) {
+
+                link.addEventListener("click", function () {
+
+                    navMenu.classList.remove("active");
+
+                    menuToggle.classList.remove("active");
+
+                    document.body.classList.remove(
+                        "menu-open"
+                    );
+
+                    menuToggle.setAttribute(
+                        "aria-expanded",
+                        "false"
+                    );
+
+                });
+
+            });
+
+    </script>
+
+</body>
+
+</html>

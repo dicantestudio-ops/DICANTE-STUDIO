@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login | DICANTE STUDIO</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body class="login-page">
+
+
+    <!-- =========================
+         HEADER
+    ========================== -->
+
+    <header>
+
+        <a href="index.html" class="site-logo">
+            DICANTE STUDIO
+        </a>
+
+
+        <nav class="nav-menu" id="nav-menu">
+
+            <a href="index.html">Home</a>
+
+            <a href="about.html">About</a>
+
+            <a href="services.html">Services</a>
+
+            <a href="contact.html">Contact</a>
+
+            <a href="signup.html" class="btn active">
+                SIGN UP
+            </a>
+
+            <a href="login.html" class="btn active" >
+                LOGIN
+            </a>
+
+        </nav>
+
+
+        <!-- MOBILE HAMBURGER -->
+
+        <button
+            class="menu-toggle"
+            id="menu-toggle"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+        >
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
+
+    </header>
+
+
+    <!-- =========================
+         LOGIN
+    ========================== -->
+
+    <main class="auth-page">
+
+        <section class="auth-section">
+
+            <div class="auth-container">
+
+
+                <!-- INTRO -->
+
+                <div class="auth-intro">
+
+                    <p class="auth-label">
+                        WELCOME BACK
+                    </p>
+
+                    <h1>
+                        Welcome
+                        <br>
+                        back.
+                    </h1>
+
+                    <p class="auth-description">
+                        Sign in to your Dicante Studio account
+                        and continue your journey with us.
+                    </p>
+
+                </div>
+
+
+                <!-- LOGIN CARD -->
+
+                <div class="auth-card">
+
+                    <form class="auth-form">
+
+
+                        <!-- EMAIL -->
+
+                        <div class="auth-group">
+
+                            <label for="email">
+                                Email Address
+                            </label>
+
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="Your email"
+                                autocomplete="email"
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- PASSWORD -->
+
+                        <div class="auth-group">
+
+                            <label for="password">
+                                Password
+                            </label>
+
+                            <input
+                                type="password"
+                                id="password"
+                                name="password"
+                                placeholder="Your password"
+                                autocomplete="current-password"
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- REMEMBER / FORGOT -->
+
+                        <div class="login-options">
+
+                            <label class="remember-me">
+
+                                <input
+                                    type="checkbox"
+                                    name="remember"
+                                >
+
+                                <span>
+                                    Remember me
+                                </span>
+
+                            </label>
+
+
+                            <a
+                                href="#"
+                                class="forgot-password"
+                            >
+                                Forgot password?
+                            </a>
+
+                        </div>
+
+
+                        <!-- LOGIN BUTTON -->
+
+                        <button
+                            type="submit"
+                            class="auth-button"
+                        >
+                            LOGIN
+                        </button>
+
+                    </form>
+
+
+                    <!-- SIGN UP LINK -->
+
+                    <p class="auth-switch">
+
+                        Don't have an account?
+
+                        <a href="signup.html">
+                            Create one
+                        </a>
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         MOBILE MENU JAVASCRIPT
+    ========================== -->
+
+    <script>
+
+        const menuToggle =
+            document.getElementById("menu-toggle");
+
+        const navMenu =
+            document.getElementById("nav-menu");
+
+
+        menuToggle.addEventListener("click", function () {
+
+            navMenu.classList.toggle("active");
+
+            menuToggle.classList.toggle("active");
+
+            const isOpen =
+                navMenu.classList.contains("active");
+
+            menuToggle.setAttribute(
+                "aria-expanded",
+                isOpen
+            );
+
+            document.body.classList.toggle(
+                "menu-open",
+                isOpen
+            );
+
+        });
+
+
+        document
+            .querySelectorAll(".nav-menu a")
+            .forEach(function (link) {
+
+                link.addEventListener("click", function () {
+
+                    navMenu.classList.remove("active");
+
+                    menuToggle.classList.remove("active");
+
+                    document.body.classList.remove(
+                        "menu-open"
+                    );
+
+                    menuToggle.setAttribute(
+                        "aria-expanded",
+                        "false"
+                    );
+
+                });
+
+            });
+
+    </script>
+
+
+</body>
+
+
+<script>
+    /* =========================================
+       MOBILE MENU
+    ========================================= */
+
+    const menuToggle =
+        document.getElementById("menu-toggle");
+
+    const navMenu =
+        document.getElementById("nav-menu");
+
+
+    if (menuToggle && navMenu) {
+
+        menuToggle.addEventListener("click", function () {
+
+            navMenu.classList.toggle("active");
+
+            menuToggle.classList.toggle("active");
+
+            const isOpen =
+                navMenu.classList.contains("active");
+
+            menuToggle.setAttribute(
+                "aria-expanded",
+                isOpen
+            );
+
+            document.body.classList.toggle(
+                "menu-open",
+                isOpen
+            );
+        });
+
+
+        document
+            .querySelectorAll(".nav-menu a")
+            .forEach(function (link) {
+
+                link.addEventListener("click", function () {
+
+                    navMenu.classList.remove("active");
+
+                    menuToggle.classList.remove("active");
+
+                    document.body.classList.remove(
+                        "menu-open"
+                    );
+
+                    menuToggle.setAttribute(
+                        "aria-expanded",
+                        "false"
+                    );
+                });
+            });
+    }
+
+
+    /* =========================================
+       LOGIN SYSTEM
+    ========================================= */
+
+    const loginForm =
+        document.querySelector(".auth-form");
+
+
+    if (loginForm) {
+
+        loginForm.addEventListener("submit", function (event) {
+
+            event.preventDefault();
+
+
+            /* Get form values */
+
+            const email =
+                document.getElementById("email")
+                .value
+                .trim()
+                .toLowerCase();
+
+            const password =
+                document.getElementById("password")
+                .value;
+
+
+            /* Remove old messages */
+
+            const oldMessage =
+                document.querySelector(".login-message");
+
+            if (oldMessage) {
+                oldMessage.remove();
+            }
+
+
+            /* =================================
+               VALIDATION
+            ================================= */
+
+            if (email === "") {
+
+                showLoginMessage(
+                    "Please enter your email address.",
+                    "error"
+                );
+
+                return;
+            }
+
+
+            if (!email.includes("@")) {
+
+                showLoginMessage(
+                    "Please enter a valid email address.",
+                    "error"
+                );
+
+                return;
+            }
+
+
+            if (password === "") {
+
+                showLoginMessage(
+                    "Please enter your password.",
+                    "error"
+                );
+
+                return;
+            }
+
+
+            /* =================================
+               GET REGISTERED USER
+            ================================= */
+
+            const savedUser =
+                localStorage.getItem("dicanteUser");
+
+
+            if (!savedUser) {
+
+                showLoginMessage(
+                    "No account was found. Please create an account first.",
+                    "error"
+                );
+
+                return;
+            }
+
+
+            const user =
+                JSON.parse(savedUser);
+
+
+            /* =================================
+               CHECK LOGIN DETAILS
+            ================================= */
+
+            if (
+                email !== user.email.toLowerCase() ||
+                password !== user.password
+            ) {
+
+                showLoginMessage(
+                    "Incorrect email or password.",
+                    "error"
+                );
+
+                return;
+            }
+
+
+            /* =================================
+               REMEMBER USER
+            ================================= */
+
+            const remember =
+                document.querySelector(
+                    'input[name="remember"]'
+                );
+
+
+            if (remember && remember.checked) {
+
+                localStorage.setItem(
+                    "dicanteLoggedIn",
+                    "true"
+                );
+
+            } else {
+
+                sessionStorage.setItem(
+                    "dicanteLoggedIn",
+                    "true"
+                );
+            }
+
+
+            /* =================================
+               SUCCESS
+            ================================= */
+
+            showLoginMessage(
+                "Login successful. Welcome back!",
+                "success"
+            );
+
+
+            /* Redirect */
+
+            setTimeout(function () {
+
+                window.location.href =
+                    "index.html";
+
+            }, 1200);
+
+        });
+    }
+
+
+    /* =========================================
+       LOGIN MESSAGE
+    ========================================= */
+
+    function showLoginMessage(message, type) {
+
+        const messageBox =
+            document.createElement("div");
+
+
+        messageBox.className =
+            "login-message " + type;
+
+
+        messageBox.textContent =
+            message;
+
+
+        const form =
+            document.querySelector(".auth-form");
+
+
+        form.insertBefore(
+            messageBox,
+            form.firstChild
+        );
+
+
+        /* Add animation */
+
+        setTimeout(function () {
+
+            messageBox.classList.add("show");
+
+        }, 10);
+    }
+</script>
+
+</html>
+

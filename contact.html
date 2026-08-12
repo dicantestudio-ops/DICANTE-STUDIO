@@ -23,9 +23,7 @@
 
     <header>
 
-        <h1>DICANTE STUDIO</h1>
-
-        <nav>
+        <nav class="nav-menu" id="nav-menu">
 
             <a href="index.html">Home</a>
 
@@ -35,10 +33,33 @@
 
             <a href="contact.html">Contact</a>
 
+            <a href="signup.html" class="btn">
+                SIGN UP
+            </a>
+
+            <a href="login.html" class="btn">
+                LOGIN
+            </a>
+
         </nav>
 
-    </header>
 
+        <!-- MOBILE HAMBURGER -->
+
+        <button
+            class="menu-toggle"
+            id="menu-toggle"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+        >
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
+
+    </header>
 
 
     <!-- =========================
@@ -73,7 +94,6 @@
             </div>
 
 
-
             <!-- CONTACT INFORMATION -->
 
             <div class="contact-grid">
@@ -97,7 +117,6 @@
                 </div>
 
 
-
                 <!-- WHATSAPP -->
 
                 <div class="contact-item">
@@ -116,7 +135,6 @@
                     </a>
 
                 </div>
-
 
 
                 <!-- AVAILABILITY -->
@@ -172,7 +190,6 @@
             </div>
 
 
-
             <!-- PROJECT ENQUIRY -->
 
             <div class="contact-form-section">
@@ -191,7 +208,6 @@
                     </h3>
 
                 </div>
-
 
 
                 <!-- FORM -->
@@ -218,7 +234,6 @@
                     </div>
 
 
-
                     <!-- EMAIL -->
 
                     <div class="form-group">
@@ -236,7 +251,6 @@
                         >
 
                     </div>
-
 
 
                     <!-- PROJECT TYPE -->
@@ -281,7 +295,6 @@
                     </div>
 
 
-
                     <!-- MESSAGE -->
 
                     <div class="form-group">
@@ -299,7 +312,6 @@
                         ></textarea>
 
                     </div>
-
 
 
                     <!-- SUBMIT BUTTON -->
@@ -322,7 +334,6 @@
     </main>
 
 
-
     <!-- =========================
          FOOTER
     ========================== -->
@@ -334,6 +345,69 @@
         </p>
 
     </footer>
+
+
+    <!-- =========================
+         MOBILE MENU JAVASCRIPT
+    ========================== -->
+
+    <script>
+
+        const menuToggle =
+            document.getElementById("menu-toggle");
+
+        const navMenu =
+            document.getElementById("nav-menu");
+
+
+        menuToggle.addEventListener("click", function () {
+
+            navMenu.classList.toggle("active");
+
+            menuToggle.classList.toggle("active");
+
+            const isOpen =
+                navMenu.classList.contains("active");
+
+            menuToggle.setAttribute(
+                "aria-expanded",
+                isOpen
+            );
+
+            document.body.classList.toggle(
+                "menu-open",
+                isOpen
+            );
+
+        });
+
+
+        /* Close menu after clicking a link */
+
+        document
+            .querySelectorAll(".nav-menu a")
+            .forEach(function (link) {
+
+                link.addEventListener("click", function () {
+
+                    navMenu.classList.remove("active");
+
+                    menuToggle.classList.remove("active");
+
+                    document.body.classList.remove(
+                        "menu-open"
+                    );
+
+                    menuToggle.setAttribute(
+                        "aria-expanded",
+                        "false"
+                    );
+
+                });
+
+            });
+
+    </script>
 
 
 </body>
