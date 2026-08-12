@@ -2853,3 +2853,302 @@ header a:hover::after {
     }
 
 }
+
+/* =====================================================
+   DICANTE STUDIO — MOBILE HAMBURGER MENU
+===================================================== */
+
+
+/* -----------------------------------------------------
+   HAMBURGER BUTTON
+----------------------------------------------------- */
+
+.menu-toggle {
+    display: none;
+
+    width: 38px;
+    height: 30px;
+
+    padding: 0;
+    margin: 0;
+
+    border: none;
+    background: transparent;
+
+    cursor: pointer;
+
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    z-index: 1100;
+}
+
+
+/* HAMBURGER LINES */
+
+.menu-toggle span {
+    display: block;
+
+    width: 100%;
+    height: 2px;
+
+    background: #fff;
+
+    transition:
+        transform 0.35s ease,
+        opacity 0.25s ease,
+        width 0.35s ease;
+}
+
+
+/* -----------------------------------------------------
+   DESKTOP NAVIGATION
+----------------------------------------------------- */
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+
+/* Navigation links */
+
+.nav-menu a {
+    position: relative;
+
+    color: #fff;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    letter-spacing: 0.5px;
+
+    text-decoration: none;
+
+    transition: opacity 0.3s ease;
+}
+
+
+/* Underline */
+
+.nav-menu a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -8px;
+
+    width: 0;
+    height: 2px;
+
+    background: #fff;
+
+    transition: width 0.3s ease;
+}
+
+
+.nav-menu a:hover {
+    opacity: 0.7;
+}
+
+
+.nav-menu a:hover::after {
+    width: 100%;
+}
+
+
+/* -----------------------------------------------------
+   MOBILE
+----------------------------------------------------- */
+
+@media (max-width: 650px) {
+
+    /* HEADER */
+
+    header {
+        position: absolute;
+
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 75px;
+
+        padding: 0 20px;
+
+        display: flex;
+
+        align-items: center;
+        justify-content: flex-end;
+
+        z-index: 1000;
+    }
+
+
+    /* ---------------------------------------------
+       HIDE DESKTOP NAVIGATION
+    --------------------------------------------- */
+
+    .nav-menu {
+        position: fixed;
+
+        top: 0;
+        right: -100%;
+
+        width: 82%;
+        height: 100vh;
+
+        background: rgba(10, 10, 10, 0.97);
+
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+
+        display: flex;
+
+        flex-direction: column;
+
+        justify-content: center;
+        align-items: center;
+
+        gap: 30px;
+
+        transition: right 0.45s ease;
+
+        z-index: 1050;
+
+        box-shadow: -20px 0 50px rgba(0, 0, 0, 0.25);
+    }
+
+
+    /* OPEN MENU */
+
+    .nav-menu.active {
+        right: 0;
+    }
+
+
+    /* ---------------------------------------------
+       MOBILE LINKS
+    --------------------------------------------- */
+
+    .nav-menu a {
+        color: #fff;
+
+        font-size: 18px;
+
+        font-weight: 500;
+
+        letter-spacing: 1px;
+    }
+
+
+    .nav-menu a::after {
+        bottom: -7px;
+
+        height: 1px;
+    }
+
+
+    /* ---------------------------------------------
+       MOBILE BUTTONS
+    --------------------------------------------- */
+
+    .nav-menu .btn {
+        width: 150px;
+
+        padding: 12px 20px;
+
+        font-size: 12px;
+
+        letter-spacing: 1px;
+
+        text-align: center;
+    }
+
+
+    /* ---------------------------------------------
+       SHOW HAMBURGER
+    --------------------------------------------- */
+
+    .menu-toggle {
+        display: flex;
+
+        position: relative;
+    }
+
+
+    /* ---------------------------------------------
+       HAMBURGER ANIMATION → X
+    --------------------------------------------- */
+
+    .menu-toggle.active span:nth-child(1) {
+        transform:
+            translateY(14px)
+            rotate(45deg);
+    }
+
+
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+
+    .menu-toggle.active span:nth-child(3) {
+        transform:
+            translateY(-14px)
+            rotate(-45deg);
+    }
+
+}
+
+
+/* =====================================================
+   SMALL PHONES
+===================================================== */
+
+@media (max-width: 400px) {
+
+    header {
+        height: 70px;
+
+        padding: 0 15px;
+    }
+
+
+    .menu-toggle {
+        width: 34px;
+        height: 27px;
+    }
+
+
+    .nav-menu {
+        width: 88%;
+
+        gap: 26px;
+    }
+
+
+    .nav-menu a {
+        font-size: 17px;
+    }
+
+
+    .nav-menu .btn {
+        width: 140px;
+
+        padding: 11px 18px;
+    }
+
+}
+
+
+/* =====================================================
+   PREVENT BODY SCROLL WHEN MENU IS OPEN
+===================================================== */
+
+body.menu-open {
+    overflow: hidden;
+}
